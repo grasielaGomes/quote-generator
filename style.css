@@ -47,10 +47,51 @@ body {
   font-size: 1rem;
   margin-top: -1rem;
   margin-bottom: 2rem;
+  color: rgb(42, 42, 43);
 }
 
 #quote {
   font-family: Caveat, serif;
   font-size: 3rem;
   line-height: .9;
+}
+
+.button-container {
+  display: flex;
+  justify-content:flex-end;
+  margin-right: -1rem;
+  gap: 1rem;
+}
+
+button {
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  height: 2.5rem;
+  border: 1px solid white;
+  border-radius: .3rem;
+  outline: none;
+  padding: .5rem 1.8rem;
+  transition: background-color 600ms;
+}
+
+button:hover {
+  background-color: white;
+  border: 1px solid gray;
+}
+
+button:active {
+  background-color: rgb(39, 39, 40);
+  color: white;
+}
+
+.twitter-button:active {
+  color: #38a1f3;
+}
+
+/* Media Query: Tablet or Smartphone */
+@media screen and (max-with: 1000px) {
+  html {
+    font-size: 87.5%;
+  }
 }
