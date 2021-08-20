@@ -1,3 +1,6 @@
+//Get Quotes from local
+import { localQuotes } from "./data/quotes.js";
+
 let apiQuotes = [];
 
 //Get Random Int
@@ -7,7 +10,9 @@ function getRandomInt(max) {
 
 // Show New Quote
 function newQuote() {
-  const quote = apiQuotes[getRandomInt(apiQuotes.length)];
+  const quote = apiQuotes.length > 0 
+    ? apiQuotes[getRandomInt(apiQuotes.length)] 
+    : localQuotes[getRandomInt(localQuotes.length)]
   console.log(quote);
 }
 
@@ -23,4 +28,4 @@ async function getQuotes() {
   }
 }
 
-window.onload = getQuotes();
+window.onload = newQuote();
