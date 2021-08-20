@@ -24,6 +24,7 @@ function newQuote() {
     : localQuotes[getRandomInt(localQuotes.length)]
   quotes.setAuthor(quote.author);
   quotes.setQuoteText(quote.text);
+  changePersona.setSrcPersona();
   loading.complete();
 }
 
@@ -37,7 +38,16 @@ async function getQuotes() {
     newQuote();
     loading.complete();
   } catch(error) {
-    console.log(error);
+     throw new Error(`Error in API: ${error}`);
+  }
+}
+
+//Change persona
+const changePersona = {
+  persona: document.querySelector('#persona'),
+  setSrcPersona: () => {
+    const number = getRandomInt(5);
+    changePersona.persona.src = `./assets/user${number}.svg`;
   }
 }
 
