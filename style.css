@@ -17,7 +17,7 @@ body {
 .quote-container {
   margin-top: -4rem;
   width: auto;
-  max-width: 60vw;
+  max-width: 50vw;
   padding: 2rem 4rem;
   border-radius: .5rem;
   background-color: white;
@@ -45,7 +45,6 @@ body {
 
 .quote-author {
   font-size: 1rem;
-  margin-top: -1rem;
   margin-bottom: 2rem;
   color: rgb(42, 42, 43);
 }
