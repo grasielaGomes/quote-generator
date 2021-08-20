@@ -57,7 +57,7 @@ body {
 
 .button-container {
   display: flex;
-  justify-content:flex-end;
+  justify-content: flex-end;
   margin-right: -1rem;
   gap: 1rem;
 }
@@ -88,9 +88,28 @@ button:active {
   color: #38a1f3;
 }
 
+.loader {
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #2e2e2f;
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 /* Media Query: Tablet or Smartphone */
+
 @media screen and (max-with: 1000px) {
   html {
-    font-size: 87.5%;
+    font-size: 67.5%;
   }
 }

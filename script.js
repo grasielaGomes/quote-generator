@@ -2,7 +2,6 @@
 import { localQuotes } from "./data/quotes.js";
 
 const quotes = {
-  quoteContainer: document.querySelector('#quote-container'),
   quoteText: document.querySelector('#quote'),
   authorText: document.querySelector('#author'),
   newQuoteBtn: document.querySelector('#new-quote'),
@@ -19,20 +18,24 @@ function getRandomInt(max) {
 
 // Show New Quote
 function newQuote() {
+  loading.showLoader();
   const quote = apiQuotes.length > 0 
     ? apiQuotes[getRandomInt(apiQuotes.length)] 
     : localQuotes[getRandomInt(localQuotes.length)]
   quotes.setAuthor(quote.author);
   quotes.setQuoteText(quote.text);
+  loading.complete();
 }
 
 // Get Quotes From API
 async function getQuotes() {
+  loading.showLoader();
   const apiUrl = 'https://type.fit/api/quotes';
   try {
     const response = await fetch(apiUrl);
     apiQuotes = await response.json();
     newQuote();
+    loading.complete();
   } catch(error) {
     console.log(error);
   }
@@ -44,6 +47,23 @@ const tweet =  {
   tweetQuote: () => {
   const twitterUrl = `https://twitter.com/intent/tweet?text=${quotes.quoteText.textContent} - ${quotes.authorText.textContent}`;
   open(twitterUrl, '_blank');
+  }
+}
+
+//Show Loading
+const loading = {
+  personaContainer: document.querySelector('#persona-container'),
+  quoteContainer: document.querySelector('#quote-container'),
+  loader: document.querySelector('#loader'),
+  showLoader: () => {
+    loading.loader.hidden = false;
+    loading.personaContainer.hidden = true;
+    loading.quoteContainer.hidden = true;
+  },
+  complete: () => {
+    loading.loader.hidden = true;
+    loading.personaContainer.hidden = false;
+    loading.quoteContainer.hidden = false;
   }
 }
 
