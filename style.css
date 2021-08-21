@@ -27,7 +27,6 @@ body {
 .quote-text {
   display: flex;
   flex-direction: column;
-  font-size: 1.2rem;
 }
 
 .fa-quote-left {
@@ -51,15 +50,16 @@ body {
 
 #quote {
   font-family: Caveat, serif;
-  font-size: 3rem;
+  font-size: 2.5rem;
   line-height: .9;
 }
 
 .button-container {
-  display: flex;
-  justify-content: flex-end;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  /* justify-content: flex-end;
   margin-right: -1rem;
-  gap: 1rem;
+  gap: 1rem; */
 }
 
 button {
@@ -70,7 +70,7 @@ button {
   border: 1px solid white;
   border-radius: .3rem;
   outline: none;
-  padding: .5rem 1.8rem;
+  padding: .5rem 0.8rem;
   background-color: rgb(226, 231, 235);
   transition: background-color 600ms;
 }
@@ -110,7 +110,5 @@ button:active {
 /* Media Query: Tablet or Smartphone */
 
 @media screen and (max-with: 1000px) {
-  .quote-text {
-    font-size: .8rem;
-  }
+  
 }
