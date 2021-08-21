@@ -11,7 +11,7 @@ This is my custom version of a quote generator project from ZTM Academy | JS Web
 
 
 ## Layout web
-![Web](https://github.com/grasielaGomes/recurring-expenses/blob/main/src/images/main.jpg?raw=true)
+![Web](https://github.com/grasielaGomes/quote-generator/blob/main/assets/layout.jpg?raw=true)
 
 
 # Tecnologias utilizadas
