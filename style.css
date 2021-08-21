@@ -110,7 +110,7 @@ button:active {
 /* Media Query: Tablet or Smartphone */
 
 @media screen and (max-with: 1000px) {
-  html {
-    font-size: 67.5%;
+  .quote-text {
+    font-size: .8rem;
   }
 }
