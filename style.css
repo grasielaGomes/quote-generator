@@ -71,6 +71,7 @@ button {
   border-radius: .3rem;
   outline: none;
   padding: .5rem 1.8rem;
+  background-color: rgb(226, 231, 235);
   transition: background-color 600ms;
 }
 
