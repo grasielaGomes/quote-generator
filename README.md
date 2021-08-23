@@ -21,9 +21,14 @@ This is my custom version of a quote generator project from ZTM Academy | JS Web
 - JavaScript
 
 ## Resources
+- Mobile first
+- Loader
 - API Fetch and local data in case of conection problems
 - Twitter integration
 
+# Illustration
+
+[Pablo Stanley](https://www.openpeeps.com).
 
 # Autor
 
