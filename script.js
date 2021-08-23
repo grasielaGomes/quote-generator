@@ -37,6 +37,7 @@ async function getQuotes() {
     apiQuotes = await response.json();
     newQuote();
     loading.complete();
+    localQuotes = apiQuotes;
   } catch(error) {
      throw new Error(`Error in API: ${error}`);
   }
